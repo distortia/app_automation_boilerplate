@@ -7,16 +7,7 @@ module Calabash
     def routes(page)
       routes =
       {
-          :splash_page => [[:SplashPage, :await]],
-          :login_page =>  [[:SplashPage, :tap, :btn_sign_in],
-                           [:LoginPage, :await]],
-          :forgot_password_page => [[:SplashPage, :tap, :btn_sign_in],
-                                    [:LoginPage, :await],
-                                    [:LoginPage, :tap, :btn_forgot_password],
-                                    [:ForgotPasswordPage, :await]],
-          :home_page => [[:SplashPage, :await], [:SplashPage, :tap, :btn_sign_in],
-                          [:LoginPage, :login_for_route],
-                          [:HomePage, :await]]
+          :home_page =>[[:HomePage, :await]]
       }
       routes[page.to_sym]
     end

@@ -4,7 +4,6 @@ require 'require_all'
 require 'allure-cucumber'
 require 'rspec/expectations'
 require 'rspec/matchers'
-require 'calabash-webdriver'
 require 'page-object'
 require 'data_magic'
 require_rel '../pages/'
@@ -61,7 +60,7 @@ else
       [
         'ERROR! Unable to start the cucumber test:',
         message,
-        "Use the profile 'android' or 'ios', or run cucumber using $ calabash-webdriver run"
+        "Use the profile 'android' or 'ios'"
       ]
 
   Calabash::Logger.error(failure_messages.join("\n"))

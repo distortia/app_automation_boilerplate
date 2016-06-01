@@ -27,3 +27,7 @@
 
 ##### Extra things you can run with:
 * `-p verbose` for debug mode
+
+
+#### Some things of note
+* Page elements are validated depending on what their name starts with: images start with `img_`, text fields start with `input_text_`. This allows verbose element naming and content validation is broken up based on these names.

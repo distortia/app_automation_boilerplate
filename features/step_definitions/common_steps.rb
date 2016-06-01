@@ -26,17 +26,17 @@ Then(/^the app is closed$/) do
   (query '*').empty?
 end
 
-And(/^I am on the (.*) page$/) do |page|
+And(/^I am on the (.*) (?:page|screen)$/) do |page|
   page_name = page(@current_page.class_for page)
   page_name.await
   @current_page = page_name
 end
 
-Then(/^the page contains the correct data for the (.*)$/) do |content|
+Then(/^the (?:page|screen) contains the correct data for the (.*)$/) do |content|
   @current_page.validate_data_for(content.gsub(' ', '_'))
 end
 
-When(/^I navigate to the (.*) page$/) do |page|
+When(/^I navigate to the (.*) (?:page|screen)$/) do |page|
   route = @current_page.route_for(page)
   @current_page.navigate_to_page(route)
   @current_page = page(@current_page.class_for page)
