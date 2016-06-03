@@ -23,6 +23,8 @@ GEM
       luffa
       rubyzip (~> 1.1)
       run_loop (>= 2.0.2, < 3.0)
+    calapog (0.1.0)
+      thor (~> 0)
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
     clipboard (1.1.0)
@@ -111,6 +113,7 @@ PLATFORMS
 DEPENDENCIES
   allure-cucumber
   calabash (= 2.0.0.prelegacy4)
+  calapog (~> 0.1.0)
   cucumber (~> 2.0)
   data_magic
   page-object
@@ -118,3 +121,6 @@ DEPENDENCIES
   require_all
   rspec-expectations
   slowhandcuke (>= 0.0.3, < 1.0)
+
+BUNDLED WITH
+   1.10.6
